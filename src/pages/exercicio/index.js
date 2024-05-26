@@ -28,8 +28,7 @@ export default function Exercicios({ navigation }) {
               </Text>
             </View>
 
-            {/* <CustomButton onPress={() => navigation.navigate('Login')} buttonStyle={estilo.modalidadeBtn}>
-          </CustomButton> */}
+
           </View>
         </ImageBackground>
       </View>
