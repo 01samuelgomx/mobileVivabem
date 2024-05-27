@@ -23,8 +23,35 @@ const [checked, setChecked] = useState(false)
               <Button title='Fechar' options={{tabBarIcon: ({size, color}) => (<FontAwesome name="close" size={24} color="black" />),  headerShown : false }}
                onPress={()=>{setVisivel(false)}}/> 
 
-              <View style={estilo.MO}>
+              <View style={estilo.modalItem}>
                   <Text style={{color: '#000'}}>Agachamento </Text>
+                  <Checkbox
+                    status={checked ? 'checked' : 'unchecked'}
+                    onPress={() => {
+                      setChecked(!checked);
+                    }}
+                  />
+              </View>
+              <View style={estilo.modalItem}>
+                  <Text style={{color: '#000'}}>Elevação de pernas </Text>
+                  <Checkbox
+                    status={checked ? 'checked' : 'unchecked'}
+                    onPress={() => {
+                      setChecked(!checked);
+                    }}
+                  />
+              </View>
+              <View style={estilo.modalItem}>
+                  <Text style={{color: '#000'}}>Tesoura </Text>
+                  <Checkbox
+                    status={checked ? 'checked' : 'unchecked'}
+                    onPress={() => {
+                      setChecked(!checked);
+                    }}
+                  />
+              </View>
+              <View style={estilo.modalItem}>
+                  <Text style={{color: '#000'}}>Extensão de perna </Text>
                   <Checkbox
                     status={checked ? 'checked' : 'unchecked'}
                     onPress={() => {

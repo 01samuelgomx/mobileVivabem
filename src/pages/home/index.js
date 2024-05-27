@@ -31,7 +31,7 @@ export default function Home({ navigation }) {
         </View>
         {/* Certifique-se de que o caminho da imagem está correto */}
         <Image source={require('../../img/treinoDash.png')} style={{width: 345, height: 219, marginTop: 30}} />
-        <CustomButton title='UPGRADE NO PLANO' buttonStyle={estilo.btnPlano} textStyle={estilo.btnTPlano}/>
+        <CustomButton title='Minha Matricula' onPress={() => navigation.navigate('matricula')} buttonStyle={estilo.btnPlano} textStyle={estilo.btnPlano}/>
         
       </ScrollView>
     );

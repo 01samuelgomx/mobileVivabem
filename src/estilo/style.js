@@ -78,10 +78,18 @@ export const estilo = {
   
   modal: {
     flex: 1,
-    width: 120,
     flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-Start',
+  },
+  modalItem:{
+    flexDirection: 'row',
+    padding: 15,
+    fontSize: 20,
+    fontWeight: '700',
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderColor: '#ccc',
   },
   btnModal: {
     width: 320,

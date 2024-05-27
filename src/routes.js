@@ -15,6 +15,7 @@ import Perfil from './pages/perfil'
 import Exercicios from './pages/exercicio'
 import Aula from './pages/aula'
 import Treino from './pages/treino'
+import Matricula from './pages/matricula'
 
 
 const Tab = createBottomTabNavigator();
@@ -58,6 +59,7 @@ export default function Routes(){
             <Stack.Screen name="perfil" component={MyTabs} />
             <Stack.Screen name="exercicios" component={MyTabs} />
             <Stack.Screen name="treino" component={Treino} />
+            <Stack.Screen name="matricula" component={Matricula} />
         </Stack.Navigator>
     );
     
