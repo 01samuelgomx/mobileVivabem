@@ -16,16 +16,18 @@ export default function Home({ navigation }) {
 
         <Text style={{fontFamily: 'Segoe UI', fontSize: 40, fontWeight: '700', color: '#34495e', marginTop: 50}}>Olá, usuário</Text>
         <Text style={{fontFamily: 'Segoe UI', fontSize: 25, fontWeight: '400', color: '#707070', marginTop: 30}}> Nome do Plano</Text>
-        {/* Corrigindo a capitalização de View */}
+       
+
+
         <View style={estilo.dashB1}>
           <Text style={{fontFamily: 'Segoe UI', fontSize: 25, fontWeight: '400', color: '#707070'}}>Você está na sua</Text>
           <Text style={{fontFamily: 'Segoe UI', fontSize: 40, fontWeight: '700', color: '#34495e'}}>contª</Text>
           <Text style={{fontFamily: 'Segoe UI', fontSize: 25, fontWeight: '400', color: '#707070'}}>sessão de treinos</Text>
         </View>
 
-        {/* Corrigindo a capitalização de View */}
+      
         <View style={estilo.dashB2}>
-          {/* <CustomButton title='Acesse suas aulas' buttonStyle={estilo.btnDash} textStyle={estilo.TextoBtnDash}/> */}
+        
           <CustomButton title="Acesse suas aulas" onPress={() => navigation.navigate('Login')} buttonStyle={estilo.btnDash} textStyle={estilo.TextoBtnDash} />
           <CustomButton title='Acesse seus treinos' onPress={() => navigation.navigate('treino')} buttonStyle={estilo.btnDash} textStyle={estilo.TextoBtnDash}/>
         </View>
