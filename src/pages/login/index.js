@@ -10,7 +10,6 @@ const CustomButton = ({ onPress, title, buttonStyle, textStyle }) => {
   );
 };
 
-// Corrigindo o caminho da imagem de fundo
 const ImgBack = require('../../img/background.png');
 
 export default function Login({ navigation }) {

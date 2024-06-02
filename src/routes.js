@@ -37,20 +37,10 @@ function MyTabs(){
     );
 }
 
-// function App(){
-//     return (
-//         <NavigationContainer>
-//             <Drawer.Navigator>
-//             <Drawer.Screen name="home" component={home} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="home" size={24} color="black"/>),  }}/>
-//             <Drawer.Screen name="Exercícios" component={home} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="dumbbell" size={24} color="black" />), }}/>
-//             <Drawer.Screen name="Aulas" component={home} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="video" size={24} color="black" />), }}/>
-//             <Drawer.Screen name="Perfil" component={home} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="user" size={24} color="black" />), }}/>
-//             </Drawer.Navigator>
-//         </NavigationContainer>
-//     );
-// }
+
 
 export default function Routes(){
+
     return (
         <Stack.Navigator >
             <Stack.Screen name='login' component={Login} options={{headerShown : false}}/>
