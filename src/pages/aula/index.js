@@ -1,5 +1,5 @@
 import React from "react";
-import {ScrollView, Button, View, Image, Text, TextInput, TouchableOpacity, ImageBackground,} from "react-native";
+import {ScrollView, View, Text, TouchableOpacity, ImageBackground,} from "react-native";
 import { estilo } from "../../estilo/style.js";
 
 const CustomButton = ({ onPress, title, buttonStyle, textStyle }) => {

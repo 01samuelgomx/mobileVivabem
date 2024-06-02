@@ -2,6 +2,27 @@ export const estilo = {
   // ------------------------------------
   //  Buttons START
   // ------------------------------------
+
+
+
+  container: {
+    padding: 20,
+  },
+  title: {
+    fontSize: 18,
+    marginBottom: 10,
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+  label: {
+    marginLeft: 8,},
+
+
+
+
   blueBtn: {
     marginTop: 10,
     paddingVertical: 10,
@@ -165,21 +186,16 @@ export const estilo = {
   },
 
   btnPlano: {
-    width: 200,
+    width: 170,
     height: 40,
     borderRadius: 10,
     alignItems: "center",
+    textAlign: 'center',
     justifyContent: "center",
-    backgroundColor: "#FFC500",
-    marginTop: 49,
-    marginBottom: 30,
-  },
-
-  btnTPlano: {
-    fontFamily: "Segoe UI",
-    fontSize: 17,
-    fontWeight: "700",
-    color: "white",
+    color: '#fff',
+    fontWeight: '700',
+    backgroundColor: "#ffc500",
+    margin: 30,
   },
 
   TextoBtnDash: {
