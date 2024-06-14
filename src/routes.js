@@ -1,10 +1,12 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Entypo, Feather, FontAwesome5 } from '@expo/vector-icons'
-import { NavigationContainer } from '@react-navigation/native'
-import { estilo } from './../src/estilo/style'
+import { Entypo, Feather, FontAwesome5 } from '@expo/vector-icons';
+import { NavigationContainer } from '@react-navigation/native';
+import { estilo } from './../src/estilo/style';
 
 const ImgBack = './src/pages/home/img/fundo.png'
 
@@ -22,15 +24,15 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 // const Drawer = createDrawerNavigator();
 
-function MyTabs(){
+function MyTabs({route}){
     return (
 
         <Tab.Navigator>
 
-            <Tab.Screen name="home" component={Home} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="home" size={24} color="black"/>), headerShown : false  }}/>
-            <Tab.Screen name="Exercícios" component={Exercicios} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="dumbbell" size={24} color="black" />), }}/>
+            <Tab.Screen name="home" component={Home}  options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="home" size={24} color="black"/>), headerShown : false  }}/>
+            <Tab.Screen name="Exercícios" initialParams={{idAluno: route.params.idAluno}} component={Exercicios} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="dumbbell" size={24} color="black" />), }}/>
             <Tab.Screen name="Aulas" component={Aula} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="video" size={24} color="black" />), }}/>
-            <Tab.Screen name="Perfil" component={Perfil} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="user" size={24} color="black" />),  headerShown : false }}/>
+            <Tab.Screen name="Perfil" component={Perfil} initialParams={{idAluno: route.params.idAluno}} options={{tabBarIcon: ({size, color}) => (<FontAwesome5 name="user" size={24} color="black" />),  headerShown : false }}/>
             
         </Tab.Navigator>
         
@@ -38,19 +40,21 @@ function MyTabs(){
 }
 
 
-
-export default function Routes(){
+export default function Routes({route}){
 
     return (
         <Stack.Navigator >
             <Stack.Screen name='login' component={Login} options={{headerShown : false}}/>
             <Stack.Screen name='esqSenha' component={EsqSenha} options={{headerShown : false}}/>
-            <Stack.Screen name="home" component={MyTabs} />
-            <Stack.Screen name="perfil" component={MyTabs} />
+
+            <Stack.Screen name="home" component={MyTabs} initialParams={{idAluno: route.params.idAluno}} />
+
+            <Stack.Screen name="perfil" initialParams={{idAluno: route.params.idAluno}} component={MyTabs} />
+
             <Stack.Screen name="exercicios" component={MyTabs} />
             <Stack.Screen name="treino" component={Treino} />
             <Stack.Screen name="matricula" component={Matricula} />
         </Stack.Navigator>
     );
-    
+
 }
