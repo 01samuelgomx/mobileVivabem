@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, Feather, FontAwesome5 } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { estilo } from './../src/estilo/style';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Axios } from 'axios';
 
 const ImgBack = './src/pages/home/img/fundo.png'
 
