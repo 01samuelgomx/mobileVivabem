@@ -25,7 +25,7 @@ const Stack = createStackNavigator();
 // const Drawer = createDrawerNavigator();
 
 
-function MyTabs({routes}){
+function MyTabs({route}){
     return (
 
         <Tab.Navigator>
@@ -41,16 +41,13 @@ function MyTabs({routes}){
 }
 
 
-export default function Routes({routes}){
+export default function Routes(){
     return (
         <Stack.Navigator >
             <Stack.Screen name='login' component={Login} options={{headerShown : false}}/>
             <Stack.Screen name='esqSenha' component={EsqSenha} options={{headerShown : false}}/>
-
-            <Stack.Screen name="home" initialParams={{idAluno: route.params.idAluno}} component={MyTabs} />
-
-            <Stack.Screen name="perfil" initialParams={{idAluno: route.params.idAluno}} component={MyTabs} />
-
+            <Stack.Screen name="home" component={MyTabs} />
+            <Stack.Screen name="perfil" component={MyTabs} />
             <Stack.Screen name="exercicios" component={MyTabs} />
             <Stack.Screen name="treino" component={Treino} />
             <Stack.Screen name="matricula" component={Matricula} />
